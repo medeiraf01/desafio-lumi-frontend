@@ -14,6 +14,13 @@ This is the frontend portion of the Full Stack Challenge developed with **React*
 
 ---
 
+## 🚀 Required access 
+
+  "email": "user@example.com",
+  "password": "password123"
+
+--
+
 ## 📦 Available Scripts
 
 In the project directory, you can run:
