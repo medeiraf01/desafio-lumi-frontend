@@ -3,7 +3,7 @@ import axios from 'axios';
 const axiosInstance = axios.create({
   baseURL: window.location.origin === 'http://localhost:5173'
     ? 'http://localhost:3000/'
-    : 'https://backend-test-61bx.onrender.com',
+    : 'https://backend-test-61bx.onrender.com/',
 });
 
 axiosInstance.interceptors.request.use((config) => {
