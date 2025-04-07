@@ -1,28 +1,71 @@
-# React + TypeScript + Vite
+# ⚛️ React + TypeScript + Vite – Frontend Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend portion of the Full Stack Challenge developed with **React**, **TypeScript**, and **Vite**. It is structured to deliver a fast, scalable, and developer-friendly experience using modern tooling and conventions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Structure
 
-## Expanding the ESLint configuration
+- **React** – UI library for building declarative interfaces
+- **TypeScript** – Type-safe development
+- **Vite** – Blazing fast dev server and bundler
+- **ESLint** – Linting with customizable rules
+- **Vite Preview** – For testing production builds locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
+## 📦 Available Scripts
+
+In the project directory, you can run:
+
+```bash
+# Start development server
+npm run dev
+
+# Build the project for production
+npm run build
+
+# Run ESLint for code quality checks
+npm run lint
+
+# Preview the production build locally
+npm run preview
+```
+
+---
+
+## 🛠️ Development Setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create an `.env` file at the root of the project and configure the API URL:
+
+```env
+VITE_API_BASE_URL=http://localhost:3000/api
+```
+
+> You can change this URL depending on where your backend is hosted.
+
+---
+
+## ✅ ESLint & Code Quality
+
+This project uses an extensible ESLint configuration tailored for TypeScript + React. It is ready for both personal and production usage.
+
+You can expand the ESLint configuration for better type-aware linting:
+
+```ts
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -31,24 +74,29 @@ export default tseslint.config({
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🔍 Optional React-Specific Plugins
 
-```js
-// eslint.config.js
+Consider installing `eslint-plugin-react-x` and `eslint-plugin-react-dom` for extended React linting support:
+
+```ts
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
   plugins: {
-    // Add the react-x and react-dom plugins
     'react-x': reactX,
     'react-dom': reactDom,
   },
   rules: {
-    // other rules...
-    // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
 })
 ```
+---
+
+## 👨‍💻 Author
+
+Developed by **Rafael Medeiros** as part of the Lumi Full Stack Challenge.
+
+---
